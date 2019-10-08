@@ -1,0 +1,41 @@
+# API for testing
+# https://jsonplaceholder.typicode.com/
+#
+###
+GET https://jsonplaceholder.typicode.com/posts
+
+###
+GET https://jsonplaceholder.typicode.com/posts/1
+
+###
+GET https://jsonplaceholder.typicode.com/posts/1/comments
+
+###
+GET https://jsonplaceholder.typicode.com/comments?postId=1
+
+###
+GET https://jsonplaceholder.typicode.com/posts?userId=1
+
+###
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json;
+
+{
+    "userId": 2,
+    "id": 101,
+    "title": "Uploading a new one",
+    "body": "Sample text"
+}
+
+###
+PATCH https://jsonplaceholder.typicode.com/posts/1
+Content-Type: application/json;
+
+{
+    "userId": 2,
+    "title": "Update",
+    "body": "Content updated"
+}
+
+###
+DELETE https://jsonplaceholder.typicode.com/posts/1
